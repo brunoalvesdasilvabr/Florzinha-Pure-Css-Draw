@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+  }
+  
+  .container{
+    margin: 5rem auto;
+    width: 23rem;
+  }
+  
+  .head{
+    border:10px solid black;
+    border-radius:50%;
+    max-width:20rem;
+    height:260px;
+    position:relative;
+    background-color:#fed1be;
+    position:relative; 
+    transition:all 1s;
+  }
+  
+  .head:active .lingua{
+    display:block;
+  }
+  
+  .head:active .pupilainside{
+    opacity:0.8;
+    transform: scale(1.3)
+  }
+  .head:active{
+    transform:scale(1.3);
+  }
+  .leftEye{
+    border:1px solid black;
+    border-radius:50%;
+    padding:2rem;
+    position:absolute;
+    top:2rem;
+    left:1rem;
+    background-color:#ff485a;
+    animation-name:blink;
+    animation-duration:2.5s;
+    animation-delay:1s;
+    animation-iteration-count:infinite;  
+    animation-fill-mode: forwards;
+  }
+  
+  .rightEye{ 
+    border:1px solid black;
+    border-radius:50% ;
+    padding:2rem;
+    position:absolute;
+    top:2rem;
+    right:1rem;
+    background-color:#ff485a;
+    animation-name:blink;
+    animation-duration:2.5s;
+    animation-delay:1s;
+    animation-iteration-count:infinite;
+    animation-fill-mode: forwards
+  }
+  
+  @keyframes blink{
+    0%{
+  
+     transform: scaleY(0.0);
+    }
+      10%,70%{
+  
+     transform: scaleY(1);
+    }  
+  }
+  
+  @keyframes smile{
+    0%{
+      border-radius:0%;
+    }
+  
+    100%{
+      border-radius:50%
+    }
+  }
+     
+  .pupilaDireita{
+     border-radius:50%;
+     background-color:black;
+     padding:2rem;
+    color:white;
+     margin-left: -29px; 
+    margin-bottom: -20px
+  }
+  
+  .pupilaEsquerda{ 
+     border-radius:50%;
+     background-color:black;
+     padding:2rem;
+    display:inline-block;
+    color:white;
+    margin-right: -29px; 
+    margin-bottom: -20px;
+  
+  }
+  
+  .pupilainside{
+     border-radius:50%;
+     background-color:white;
+     padding:1rem;
+     color:white;
+     animation-name:blink;
+     animation-duration:1s;
+     animation-delay:3s;
+     animation-iteration-count:infinite;
+    animation-fill-mode: forwards
+  }
+  
+  
+  .mouth{
+    content:"";
+    position:absolute;
+    padding:1rem;
+    bottom:2rem;
+    right:9rem;
+    border-radius:50%;
+    border-bottom: 4px solid black;
+    animation-duration:5s;
+    animation-name:smile;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+    transition:all 1s;
+  }
+  
+  .lingua{
+    content:"";
+    position:absolute;
+    top:2rem;
+    right:.5rem;
+    padding:.5rem;
+    border-radius: 0 0 50% 50%;
+    background-color:red;
+    display:none;
+    border: 1px solid black;
+    transition:all 1s;
+  }
+  
+  
+  
